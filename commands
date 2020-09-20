@@ -17,9 +17,12 @@ git config credential.helper gcloud.sh
 git remote add origin https://source.developers.google.com/p/$DEVSHELL_PROJECT_ID/r/sample-app
 git config --global user.email "[EMAIL_ADDRESS]"
 git config --global user.name "[USERNAME]"
+git add .
+git commit -m "Initial commit"
+git push origin master
 git checkout -b new-feature
-vi html.go  
-vi main.go  
+vi html.go  //edit some line
+vi main.go  //edit version
 git add Jenkinsfile html.go main.go
 git commit -m "Version 2.0.0"
 git push origin new-feature
